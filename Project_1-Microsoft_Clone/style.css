@@ -66,3 +66,29 @@ body {
     width: 100%;
     object-fit: cover;
 }
+
+.sec1{
+    width: 100vw;
+    height: 65vh;
+    background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Laptop-AI-7Ed-Sapphire-MC001-3000x1682:VP5-1920x600);    
+    background-size: cover;
+    padding: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sec1 h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.sec1 button{
+    width: fit-content;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #0067ba;
+    color: white;
+}

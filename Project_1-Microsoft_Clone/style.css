@@ -161,3 +161,67 @@ body {
     color: white;
     margin-top: 20px;
 }
+
+.sec4{
+    height: 80vh;
+    width: 100;
+    padding: 40px 100px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.sec4-img{
+    height: 100%;
+    width: 100%;
+    background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Hero-Windows11-GlobalLaunch:VP5-1596x600);
+    background-size: cover;
+    padding: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sec4 button{
+    width: fit-content;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #0067ba;
+    color: white;
+}
+
+
+.sec4-img h1{
+    font-weight: 500;
+    font-size: 35px;
+}
+
+.sec4-img p{
+    line-height: 25px;
+}
+
+.sec4 button{
+    width: fit-content;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #0067ba;
+    color: white;
+}
+
+#sec5-heading{
+    margin-left: 100px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.card1{
+    height: 460px;
+}
+
+.card1 .card-bottom{
+    height: 280px;
+}

@@ -92,3 +92,28 @@ body {
     background-color: #0067ba;
     color: white;
 }
+
+.sec2{
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.sec2 .box{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.box img{
+    height: 40px;
+}
+
+.box span{
+    color: #0067ba;
+    text-decoration: underline;
+    font-weight: 600;
+}

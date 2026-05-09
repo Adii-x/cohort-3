@@ -8,6 +8,7 @@ html , body{
     height: 100%;
     width: 100%;
     background-color: black;
+    color: white;
 }
 
 header nav{
@@ -29,8 +30,8 @@ header nav{
 
 .navLinks a{
     text-decoration: none;
-    color: white;
     font-weight: 400;
+    color: white;
 }
 
 .navBtn button{
@@ -38,7 +39,103 @@ header nav{
     padding: 7px 13px;
     border-radius: 7px;
     background-color: rgb(36, 36, 36);
-    color: white;
     font-size: 19px;
     cursor: pointer;
+    color: white;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+#Btn:hover{
+    background-color: rgb(255, 94, 0);
+    transform: scale(1.1);
+}
+
+h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 90px;
+    font-weight: 600;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.btn{
+    background-color: rgb(36, 36, 36);
+    padding: 7px 13px;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover{
+    background-color: rgb(255, 94, 0);
+    transform: scale(1.1);
+}
+
+.cardContainer{
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px 40px;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.card{
+    height: 100%;
+    width: 22%;
+    background-color: rgb(16, 16, 16);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.ImagePart{
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.ImagePart img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.content{
+    height: 40%;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardBtn{
+    width: fit-content;
+    background-color: rgb(209, 56, 0);
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.content h3{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.content p{
+    color: grey;
+    font-size: 14px;
 }

@@ -1,42 +1,244 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SunMall</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="logo">
-          <img src="./Assets/logo.png" alt="Logo" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SunMall</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./Assets/logo.png" alt="Logo" />
+      </div>
+
+      <div class="navLinks">
+        <a href="#">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#">CHIPS</a>
+        <a href="#">SERVICES</a>
+        <a href="#">CONTACT</a>
+      </div>
+
+      <div class="navSearch">
+        <div class="search">
+          <i class="ri-search-line"></i>
+        </div>
+        <div class="inpPlace">
+          <input type="text" placeholder="Search for Chips..." />
+        </div>
+        <div class="cart">
+          <i class="ri-shopping-bag-fill"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="left">
+      <div class="left-top">
+        <p><span><i class="ri-star-fill"></i></span>100% REAL INGREDIENTS</p>
+      </div>
+      <div class="heading">
+        <h1>EAT OUR <span>GRILLED</span> <br> POTATO CHIPS</h1>
+      </div>
+      <div class="design">
+        <img src="./Assets/design.png" alt="design">
+      </div>
+      <div class="para">
+        <p>Satisfying savory Chinese meat sauce chips <br> without any hard-to-find ingredients.</p>
+      </div>
+      <div class="btns">
+        <div class="btn1">
+          <p><span><i class="ri-shopping-basket-line"></i></span>
+          <div>ADD TO CART</div>
+          </p>
+        </div>
+        <div class="btn2">
+          <div>-</div>
+          <div>2</div>
+          <div>+</div>
+        </div>
+      </div>
+      <div class="dets">
+        <div class="detail-box">
+          <div class="icon green-left">
+            <i class="ri-leaf-fill"></i>
+          </div>
+
+          <div class="text">
+            <h3>100% NATURAL</h3>
+            <p>No artificial flavors</p>
+          </div>
         </div>
 
-        <div class="navLinks">
-          <a href="#">HOME</a>
-          <a href="#">ABOUT</a>
-          <a href="#">CHIPS</a>
-          <a href="#">SERVICES</a>
-          <a href="#">CONTACT</a>
+        <div class="detail-box">
+          <div class="icon orange-left">
+            <i class="ri-fire-fill"></i>
+          </div>
+
+          <div class="text">
+            <h3>OVEN GRILLED</h3>
+            <p>Not fried</p>
+          </div>
         </div>
 
-        <div class="navSearch">
-          <div class="search">
-            <i class="ri-search-line"></i>
+        <div class="detail-box">
+          <div class="icon red-left">
+            <i class="ri-heart-fill"></i>
           </div>
-          <div class="inpPlace">
-            <input type="text" placeholder="Search for Chips...">
-          </div>
-          <div class="cart">
-            <i class="ri-shopping-bag-fill"></i>
+
+          <div class="text">
+            <h3>TASTY & CRUNCHY</h3>
+            <p>Irresistible bite</p>
           </div>
         </div>
-      </nav>
-    </header>
-  </body>
+      </div>
+    </div>
+
+    <div class="righ">
+
+      <div class="feature">
+        <div class="circle green">
+          <img src="./Assets/chille.png" alt="Chille">
+        </div>
+
+        <div class="content">
+          <h3>EXTRA CHILI</h3>
+          <p>Zha Jiang mian is crazy hot even when it's simplified</p>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="feature">
+        <div class="circle red">
+          <img src="./Assets/beaf.png" alt="Beaf">
+        </div>
+
+        <div class="content">
+          <h3>BEEF FLAVOUR</h3>
+          <p>Comes with a lot extra energy calories and Oxizen</p>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="feature">
+        <div class="circle yellow">
+          <img src="./Assets/fire.png" alt="Fire">
+        </div>
+
+        <div class="content">
+          <h3>SMOKEY SAUCE</h3>
+          <p>The meat sauce is kind of reminiscent of a Chinese.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <img src="./Assets/Main.png" alt="Chips Packet">
+
+  </main>
+
+  <div class="bottom">
+
+    <div class="bottom-left">
+        <h2>OUR TOP <br> FLAVOURS</h2>
+
+        <div class="line-design">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="arrows">
+            <div class="arrow">
+                <i class="ri-arrow-left-line"></i>
+            </div>
+
+            <div class="arrow active">
+                <i class="ri-arrow-right-line"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-img">
+                <img src="./Assets/1.png" alt="chips">
+            </div>
+
+            <div class="card-content">
+                <h3>BLACK BARBECUE</h3>
+
+                <div class="rating">
+                    ★★★★★ <span>(4.8)</span>
+                </div>
+
+                <h4>$12.30</h4>
+
+                <button>
+                    ORDER NOW
+                    <i class="ri-arrow-right-line"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card black-card">
+            <div class="card-img xyz">
+                <img src="./Assets/2.png" alt="chips">
+            </div>
+
+            <div class="card-content">
+                <h3>MR. POTATO</h3>
+
+                <div class="rating">
+                    ★★★★★ <span>(4.9)</span>
+                </div>
+
+                <h4>$15.89</h4>
+
+                <button>
+                    ORDER NOW
+                    <i class="ri-arrow-right-line"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <img src="./Assets/3.png" alt="chips">
+            </div>
+
+            <div class="card-content">
+                <h3>TOM YOMM</h3>
+
+                <div class="rating">
+                    ★★★★★ <span>(4.7)</span>
+                </div>
+
+                <h4>$11.50</h4>
+
+                <button>
+                    ORDER NOW
+                    <i class="ri-arrow-right-line"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
 </html>

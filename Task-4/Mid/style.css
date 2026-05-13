@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+
+  padding: 20px;
+}
+
+main {
+  min-height: 100vh;
+
+  display: grid;
+
+  justify-content: center;
+  align-content: center;
+
+  padding: 20px;
+  gap: 10px;
+
+  grid-template-columns: 15% 15% 15% 15% 15%;
+  grid-template-rows: 20% 20% 20% 20% 30%;
+
+  grid-template-areas:
+    "intro intro img1 img2 social"
+    "intro intro img1 img2 resources"
+    "myimg techStack img3 img3 resources"
+    "myimg techStack img3 img3 mode"
+    "current current current connect connect";
+}
+
+.box {
+  background: transparent;
+  border: 3px solid rgb(31, 31, 31);
+  border-radius: 20px;
+}
+
+.intro {
+  grid-area: intro;
+}
+
+.topimg1 {
+  grid-area: img1;
+  overflow: hidden;
+}
+
+.topimg1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.topimg2 {
+  grid-area: img2;
+  overflow: hidden;
+}
+
+.topimg2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.social {
+  grid-area: social;
+}
+
+.myimg {
+  grid-area: myimg;
+  overflow: hidden;
+}
+
+.myimg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.techStack {
+  grid-area: techStack;
+}
+
+.centerimg {
+  grid-area: img3;
+  overflow: hidden;
+}
+
+.centerimg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.resources {
+  grid-area: resources;
+}
+
+.mode {
+  grid-area: mode;
+}
+
+.current {
+  grid-area: current;
+}
+
+.connect {
+  grid-area: connect;
+}

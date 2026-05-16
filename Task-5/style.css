@@ -2,8 +2,129 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: serif;
 }
 html , body{
     height: 100%;
     width: 100%;
+}
+
+nav{
+    height: 10vh;
+    padding: 50px 100px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+nav::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    right: 100px;
+    height: 1px;
+    background: rgba(157, 157, 157, 0.112);
+}
+
+.navLeft{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navLeft img{
+    height: 28px;
+}
+
+.navLeft span{
+    background-color: #EDDED5;
+    padding: 5px 10px;
+    border-radius: 40px;
+}
+
+.navRight{
+    display: flex;
+    gap: 40px;
+    padding-right: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.navLinks{
+    display: flex;
+    gap: 40px;
+}
+
+.navLinks a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    padding-block-end: 4px;
+    position: relative;
+}
+
+.navLinks a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1.5px;
+    background-color: black;
+
+    transition: width 0.35s ease;
+}
+
+.navLinks a:hover::after{
+    width: 100%;
+}
+
+#first{
+    background-color: #EDDED5;
+    padding: 1px 4px;
+    border-radius: 50%;
+}
+
+.navBtn{
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: 1px solid black;
+    transition: all 0.3s ease;
+}
+
+.navBtn:hover{
+    background-color: black;
+    color: white;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    padding: 180px 100px;
+}
+
+.sec1 h1{
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 100px;
+    font-family: sans-serif;
+}
+
+.sec1 p{
+    font-size: 23px;
+    line-height: 35px;
+    padding-top: 20px;
+}
+
+.sec1 button{
+    padding: 18px 24px;
+    border: none;
+    font-size: 17px;
+    color: white;
+    background-color: black;
+    font-family: sans-serif;
+    border-radius: 40px;
+    margin-top: 30px;
 }

@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px 20px 30px 0px;
+}
+
+#left {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+#left nav {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 120px;
+  padding-bottom: 30px;
+}
+
+#left nav h4 {
+  transform: rotate(270deg);
+  font-weight: 500;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.card {
+  background: #8184d3;
+  height: 100%;
+  width: 85%;
+  border-radius: 30px;
+  clip-path: polygon(
+    0 7%,
+    /* start slightly down on left */ 35% 7%,
+    /* straight line */ 45% 0,
+    /* go upward creating / cut */ 100% 0,
+    100% 100%,
+    0 100%
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card .image {
+  height: 55%;
+}
+
+.card .content {
+  height: 45%;
+  padding: 40px 30px;
+  display: flex;
+}
+
+.content .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left h2 {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.left h2 span {
+  font-weight: 400;
+}
+
+.left p {
+  font-weight: 400;
+  letter-spacing: 3px;
+  border-bottom: 2px dotted white;
+  padding-bottom: 5px;
+}
+
+.left {
+  color: white;
+}
+
+.card h4 {
+  color: black;
+  position: absolute;
+}
+
+.image {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  height: 90%;
+  right: 10%;
+  width: 90%;
+  border-radius: 80px;
+  bottom: -10%;
+  width: fit-content;
+  overflow: hidden;
+}
+
+.container img {
+  height: 100%;
+  position: relative;
+  bottom: 0.4%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.about {
+  position: absolute;
+
+  top: 15px;
+  left: 90px;
+  z-index: 100;
+}
+
+.about h4 {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  padding-left: 20px;
+}
+
+#right {
+  height: 100%;
+  width: 60%;
+  padding: 10px;
+  display: grid;
+  gap: 15px;
+  padding: 10px;
+  grid-template-columns: 1fr 0.6fr 0.6fr;
+  grid-template-rows: 20% 50% 30%;
+  grid-template-areas:
+    "heading heading heading"
+    "video video projects"
+    "clients awards awards";
+    padding-bottom: 30px;
+}
+.box {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.heading {
+  grid-area: heading;
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 20px;
+}
+
+.video {
+  grid-area: video;
+  position: relative;
+}
+
+.video img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.video .play {
+  position: absolute;
+  background-color: #ffffffc0;
+  padding: 20px 20px 20px 25px;
+  filter: blur(1px);
+  border-radius: 50%;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.projects {
+  grid-area: projects;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  background-color: #a9dad7;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  line-height: 45px;
+}
+
+.top span {
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.btm {
+  background-color: #8e6fbe;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  line-height: 45px;
+  color: white;
+}
+
+.btm span {
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.clients {
+  grid-area: clients;
+  background-color: #595959;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  color: white;
+}
+
+.clients span{
+    font-size: 60px;
+}
+
+.clients p{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.awards {
+  grid-area: awards;
+  background-color: black;
+  display: flex;
+}
+
+.aleft{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aleft img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.aright{
+    background-color: #ffc267;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px 0px 0px 70px;
+    border-radius: 20px;
+}
+
+.aright h2{
+    font-size: 40px;
+    line-height: 30px;
+}
+
+.aright h2 span{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.aright p{
+    font-size: 20px;
+    font-weight: 500;
+}

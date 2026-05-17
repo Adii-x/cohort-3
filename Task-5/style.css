@@ -196,20 +196,20 @@ main {
   background: rgba(157, 157, 157, 0.112);
 }
 
-.sec3Heading{
-    margin-top: 40px;
-    font-family: serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.sec3Heading {
+  margin-top: 40px;
+  font-family: serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.sec3Heading h2{
-    font-size: 55px;
-    font-weight: 500;
+.sec3Heading h2 {
+  font-size: 55px;
+  font-weight: 500;
 }
 
-.sec3Heading button{
+.sec3Heading button {
   padding: 13px 25px;
   font-size: 15px;
   background: transparent;
@@ -218,173 +218,213 @@ main {
   transition: all 0.3s ease;
 }
 
-.sec3Heading button:hover{
+.sec3Heading button:hover {
   background-color: black;
   color: white;
 }
 
-.workSection{
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
+.workSection {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
 }
 
-.workCard{
-    width: 640px;
-    height: 480px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.workCard {
+  width: 640px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.workImg{
-    overflow: hidden;
+.workImg {
+  overflow: hidden;
 }
 
-.workImg img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform-origin: top;
-    transition: all 0.8s ease;
+.workImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: top;
+  transition: all 0.8s ease;
 }
 
-.workCard img:hover{
-    transform: scale(1.07);
+.workCard img:hover {
+  transform: scale(1.07);
 }
 
-.imgCaption{
-    width: 100%;
-    height: 40px;
-    font-size: 21px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.imgCaption {
+  width: 100%;
+  height: 40px;
+  font-size: 21px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.imgCaption span{
-    font-size: 21px;
+.imgCaption span {
+  font-size: 21px;
 }
 
-.imgCaption button{
-    border: 1px solid black;
-    background: transparent;
-    padding: 8px 10px;
-    border-radius: 30px;
+.imgCaption button {
+  border: 1px solid black;
+  background: transparent;
+  padding: 8px 10px;
+  border-radius: 30px;
 }
 
-.sec4{
-    height: 100vh;
-    margin-top: 100px;
-    font-family: serif;
+.sec4 {
+  height: 100vh;
+  margin-top: 100px;
+  font-family: serif;
 }
 
-.sec4 .work p{
-    font-size: 15px;
-    font-weight: 100;
+.sec4 .work p {
+  font-size: 15px;
+  font-weight: 100;
 }
 
-.sec4Cards{
-    height: 100%;
-    margin-top: 80px;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 
+.sec4Cards {
+  height: 100%;
+  margin-top: 80px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
     "card1 card2 card3 card4"
-    "card5 card6 card7 card8"
-    ;
+    "card5 card6 card7 card8";
 }
 
-.box{
-    padding: 50px 45px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-transform: uppercase;
+.box {
+  padding: 50px 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-transform: uppercase;
 }
 
-.box p{
-    font-size: 15px;
-    font-weight: 200;
+.box p {
+  font-size: 15px;
+  font-weight: 200;
 }
 
-.box h4{
-    font-size: 22px;
+.box h4 {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.card1 {
+  grid-area: card1;
+  background-color: #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 45px 25px 45px;
+}
+
+.boxtop p {
+  font-size: 14px;
+}
+
+.boxtop h3 {
+  margin-top: 40px;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.boxbtm button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  margin-top: 30px;
+  border-radius: 30px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.boxbtm button span {
+  font-size: 20px;
+}
+
+.card2 {
+  grid-area: card2;
+  background-color: #f1f6f5;
+}
+
+.card3 {
+  grid-area: card3;
+  background-color: #f8f8f8;
+}
+
+.card4 {
+  grid-area: card4;
+  background-color: #fff;
+}
+
+.card5 {
+  grid-area: card5;
+  background-color: #fff;
+}
+
+.card6 {
+  grid-area: card6;
+  background-color: #f8f8f8;
+}
+
+.card7 {
+  grid-area: card7;
+  background-color: #f8ede3;
+}
+
+.card8 {
+  grid-area: card8;
+  background-color: #f8ede3;
+}
+
+.sec5 {
+  width: 100%;
+  height: 100vh;
+  margin-top: 210px;
+  display: flex;
+  justify-content: center;
+  font-family: serif;
+}
+
+.sec5card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  padding-top: 100px;
+}
+
+.sec5heading{
+    width: 100%;
+}
+
+.sec5heading h3{
+    font-size: 50px;
     font-weight: 400;
 }
 
-.card1{
-    grid-area: card1;
-    background-color: #F1F5F9;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 50px 45px 25px 45px;
+.sec5Info {
+  display: flex;
+  gap: 40px;
+  padding-top: 30px;
+  color: rgb(75, 75, 75);
+  font-size: 18px;
+  width: 100%;
 }
 
-.boxtop p{
-    font-size: 14px;
-}
-
-.boxtop h3{
-    margin-top: 40px;
-    font-size: 25px;
-    font-weight: 400;
-}
-
-.boxbtm button{
-    background-color: black;
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    margin-top: 30px;
-    border-radius: 30px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.boxbtm button span{
-    font-size: 20px;
-}
-
-.card2{
-    grid-area: card2;
-    background-color: #F1F6F5;
-}
-
-.card3{
-    grid-area: card3;
-    background-color: #F8F8F8;
-}
-
-.card4{
-    grid-area: card4;
-    background-color: #fff;
-}
-
-.card5{
-    grid-area: card5;
-    background-color: #fff;
-}
-
-.card6{
-    grid-area: card6;
-    background-color: #F8F8F8;
-}
-
-.card7{
-    grid-area: card7;
-    background-color: #F8EDE3;
-}
-
-.card8{
-    grid-area: card8;
-    background-color: #F8EDE3;
+.sec5Info article{
+    line-height: 27px;
+    font-weight: 300;
 }

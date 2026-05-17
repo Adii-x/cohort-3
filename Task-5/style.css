@@ -1,176 +1,276 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  height: 10vh;
+  padding: 50px 100px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+nav::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  right: 100px;
+  height: 1px;
+  background: rgba(157, 157, 157, 0.112);
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.navLeft img {
+  height: 28px;
+}
+
+.navLeft span {
+  background-color: #edded5;
+  padding: 5px 10px;
+  border-radius: 40px;
+}
+
+.navRight {
+  display: flex;
+  gap: 40px;
+  padding-right: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.navLinks {
+  display: flex;
+  gap: 40px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding-block-end: 4px;
+  position: relative;
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1.5px;
+  background-color: black;
+
+  transition: width 0.35s ease;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+#first {
+  background-color: #edded5;
+  padding: 1px 4px;
+  border-radius: 50%;
+}
+
+.navBtn {
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 1px solid black;
+  transition: all 0.3s ease;
+}
+
+.navBtn:hover {
+  background-color: black;
+  color: white;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 180px 100px;
+}
+
+.sec1 h1 {
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 100px;
+  font-family: sans-serif;
+}
+
+.sec1 p {
+  font-size: 23px;
+  line-height: 35px;
+  padding-top: 20px;
+}
+
+.sec1 button {
+  padding: 18px 24px;
+  border: none;
+  font-size: 17px;
+  color: white;
+  background-color: black;
+  font-family: sans-serif;
+  border-radius: 40px;
+  margin-top: 30px;
+}
+
+.sec2 {
+  height: 88vh;
+  margin-top: 60px;
+}
+
+.logos {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logos img {
+  height: 40px;
+}
+
+.brandInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #f4f4f5;
+  font-family: serif;
+  padding: 60px 40px;
+  max-height: 100%;
+  width: 300px;
+}
+
+.card h3 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.card p {
+  font-size: 18px;
+  line-height: 30px;
+  color: rgb(99, 99, 99);
+  margin-bottom: 20px;
+}
+
+.card a {
+  color: black;
+}
+
+.sec3 {
+  min-height: 100vh;
+}
+
+.work {
+  font-size: 12px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.work::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  height: 1px;
+  background: rgba(157, 157, 157, 0.112);
+}
+
+.sec3Heading{
+    margin-top: 40px;
     font-family: serif;
-}
-html , body{
-    height: 100%;
-    width: 100%;
-}
-
-nav{
-    height: 10vh;
-    padding: 50px 100px 40px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    position: relative;
-}
-
-nav::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 100px;
-    right: 100px;
-    height: 1px;
-    background: rgba(157, 157, 157, 0.112);
-}
-
-.navLeft{
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.navLeft img{
-    height: 28px;
-}
-
-.navLeft span{
-    background-color: #EDDED5;
-    padding: 5px 10px;
-    border-radius: 40px;
-}
-
-.navRight{
-    display: flex;
-    gap: 40px;
-    padding-right: 100px;
-    display: flex;
     align-items: center;
 }
 
-.navLinks{
-    display: flex;
-    gap: 40px;
-}
-
-.navLinks a{
-    text-decoration: none;
-    color: black;
+.sec3Heading h2{
+    font-size: 55px;
     font-weight: 500;
-    padding-block-end: 4px;
-    position: relative;
 }
 
-.navLinks a::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0%;
-    height: 1.5px;
-    background-color: black;
-
-    transition: width 0.35s ease;
+.sec3Heading button{
+  padding: 13px 25px;
+  font-size: 15px;
+  background: transparent;
+  border-radius: 30px;
+  border: 1px solid black;
+  transition: all 0.3s ease;
 }
 
-.navLinks a:hover::after{
-    width: 100%;
+.sec3Heading button:hover{
+  background-color: black;
+  color: white;
 }
 
-#first{
-    background-color: #EDDED5;
-    padding: 1px 4px;
-    border-radius: 50%;
-}
-
-.navBtn{
-    padding: 10px 15px;
-    border-radius: 30px;
-    border: 1px solid black;
-    transition: all 0.3s ease;
-}
-
-.navBtn:hover{
-    background-color: black;
-    color: white;
-}
-
-main{
-    height: 100%;
-    width: 100%;
-    padding: 180px 100px;
-}
-
-.sec1 h1{
-    font-size: 100px;
-    font-weight: 400;
-    line-height: 100px;
-    font-family: sans-serif;
-}
-
-.sec1 p{
-    font-size: 23px;
-    line-height: 35px;
-    padding-top: 20px;
-}
-
-.sec1 button{
-    padding: 18px 24px;
-    border: none;
-    font-size: 17px;
-    color: white;
-    background-color: black;
-    font-family: sans-serif;
-    border-radius: 40px;
+.workSection{
     margin-top: 30px;
-}
-
-.sec2{
-    height: 100%;
-    margin-top: 60px;
-}
-
-.logos{
-    height: 140px;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 22px;
 }
 
-.logos img{
-    height: 40px;
-}
-
-.brandInfo{
+.workCard{
+    width: 640px;
+    height: 480px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
-.card{
-    background-color: #F4F4F5;
-    font-family: serif;
-    padding: 60px 50px;
-    max-height: 100%;
-    width: 300px;
+.workImg{
+    overflow: hidden;
 }
 
-.card h3{
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 30px;
+.workImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-origin: top;
+    transition: all 0.8s ease;
 }
 
-.card p{
-    font-size: 18px;
-    line-height: 30px;
-    color: rgb(99, 99, 99);
-    margin-bottom: 20px;
+.workCard img:hover{
+    transform: scale(1.07);
 }
 
-.card a{
-    color: black;
+.imgCaption{
+    width: 100%;
+    height: 40px;
+    font-size: 21px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgCaption span{
+    font-size: 21px;
+}
+
+.imgCaption button{
+    border: 1px solid black;
+    background: transparent;
+    padding: 8px 10px;
+    border-radius: 30px;
 }

@@ -128,3 +128,49 @@ main{
     border-radius: 40px;
     margin-top: 30px;
 }
+
+.sec2{
+    height: 100%;
+    margin-top: 60px;
+}
+
+.logos{
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logos img{
+    height: 40px;
+}
+
+.brandInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    background-color: #F4F4F5;
+    font-family: serif;
+    padding: 60px 50px;
+    max-height: 100%;
+    width: 300px;
+}
+
+.card h3{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.card p{
+    font-size: 18px;
+    line-height: 30px;
+    color: rgb(99, 99, 99);
+    margin-bottom: 20px;
+}
+
+.card a{
+    color: black;
+}

@@ -8,6 +8,8 @@ html,
 body {
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
@@ -101,7 +103,7 @@ nav::after {
 }
 
 main {
-  height: 100%;
+  flex: 1;
   width: 100%;
   padding: 180px 100px;
 }
@@ -430,8 +432,9 @@ main {
 }
 
 .sec6{
-  height: 100vh;
+  min-height: auto;
   padding-top: 50px;
+  padding-bottom: 50px;
   font-family: serif;
 }
 
@@ -562,7 +565,7 @@ main {
 }
 
 .sec7{
-  height: 100vh;
+  padding: 50px 0;
   display: flex;
   justify-content: flex-end;
   margin-top: 130px;
@@ -570,7 +573,7 @@ main {
 }
 
 .companyInfo{
-  height: 100vh;
+  min-height: auto;
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -628,7 +631,7 @@ main {
 }
 
 .sec8{
-  height: 100vh;
+  padding: 100px 0;
   margin-top: 150px;
   display: flex;
   justify-content: center;
@@ -666,7 +669,7 @@ main {
 }
 
 .sec9{
-  height: 80vh;
+  height: 65vh;
   width: 100%;
 }
 
@@ -710,4 +713,96 @@ main {
 .proCaption a{
   text-decoration: none;
   color: black;
+}
+
+footer{
+  width: 100%;
+  padding: 0px 100px;
+  height: auto;
+  min-height: 70vh;
+  font-family: serif;
+}
+
+.temp{
+  background-color: red;
+}
+
+.footup{
+    height: 60vh;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+}
+
+.footup .footConnect img{
+  height: 25px;
+  margin-bottom: 40px;
+}
+
+.footConnect div{
+  display: flex;
+  gap: 30px;
+  font-size: 25px;
+}
+
+.temp{
+  background-color: #F0F8FF;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.FootLinks{
+  padding-top: 20px;
+}
+
+.FootLinks p{
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.FootLinks p::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  right: 20px;
+  height: 1px;
+  background-color: rgba(167, 167, 167, 0.306);
+}
+
+.links{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+.links a{
+  text-decoration: none;
+  color: black;
+}
+
+.btn{
+  background-color: black;
+  color: white;
+  width: fit-content;
+  margin-top: 40px;
+  padding: 17px 25px;
+  border-radius: 30px;
+}
+
+.footdown{
+  display: flex;
+  justify-content: space-between;
+  color: grey;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.footdown p:last-child{
+  display: flex;
+  gap: 40px;
 }

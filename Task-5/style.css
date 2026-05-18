@@ -560,3 +560,69 @@ main {
   padding: 5px;
   border-radius: 50%;
 }
+
+.sec7{
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 130px;
+  font-family: serif;
+}
+
+.companyInfo{
+  height: 100vh;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.upper{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.upper::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(157, 157, 157, 0.112);
+}
+
+.complogo{
+  height: 100%;
+  width: 30%;
+}
+
+.complogo img{
+  width: 150px;
+}
+
+.compInfo{
+  width: 70%;
+  height: 100%;
+}
+
+.compInfo h4{
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 300;
+}
+
+.compInfo p{
+  margin-top: 40px;
+  line-height: 25px;
+}
+
+.lower{
+  width: 100%;
+  padding-top: 80px;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}

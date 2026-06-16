@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div class="navLeft">Task Manager</div>
+
+        <div class="navRight">
+          <p>Aditya</p>
+          <div class="profile">
+            <img
+              src="https://images.unsplash.com/photo-1777328638754-7e3ece672060?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Profile Image "
+            />
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <section class="left"></section>
+
+        <section id="divide"></section>
+
+        <section class="right">
+          <div class="rightTop">
+            <div></div>
+            <button id="create">
+              Create Task <span><i class="ri-add-fill"></i></span>
+            </button>
+          </div>
+
+          <div class="taskCont"></div>
+
+        </section>
+      </div>
+
+      <div class="form">
+
+        <form>
+          
+          <div>
+            <h1>Create Task</h1>
+            <p id="close"><i class="ri-close-fill"></i></p>
+          </div>
+
+          <label for="name">Task Name</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Enter task name..."
+            autocomplete="off"
+            required
+          />
+
+          <label for="info">Description</label>
+          <input
+            id="info"
+            type="text"
+            placeholder="Enter task description..."
+            autocomplete="off"
+            required
+          />
+
+          <button id="taskCreate">
+            Create Task
+            <span><i class="ri-arrow-drop-right-line"></i></span>
+          </button>
+
+        </form>
+
+      </div>
+
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

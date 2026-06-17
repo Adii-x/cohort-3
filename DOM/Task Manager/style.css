@@ -77,12 +77,6 @@ nav::after{
     background-color: rgba(110, 110, 110, 0.212);
 }
 
-.left{
-    height: 100%;
-    width: 30%;
-    background-color: rgb(163, 163, 42);
-}
-
 .right{
     height: 100%;
     width: 70%;
@@ -326,4 +320,108 @@ nav::after{
 .completed{
     background-color: #DCFCE7;
     border-color: #22C55E;
+}
+
+.left{
+    height: 100%;
+    width: 30%;
+    overflow-y: auto;
+}
+
+.left::-webkit-scrollbar{
+    display: none;
+}
+
+.propagation{
+    padding:20px;
+}
+
+#bubbling,
+#capturing{
+    padding:20px;
+    border:2px solid black;
+    margin-top:20px;
+}
+
+.propagation button{
+    padding: 5px 14px;
+}
+
+.attr{
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px;
+}
+
+.attr h3{
+    font-size: 20px;
+}
+
+.attr input{
+    padding: 10px;
+    font-size: 16px;
+}
+
+.attr button{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.renderPipeline{
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+.renderPipeline h3{
+    margin-bottom: 10px;
+}
+
+.step{
+    width: 220px;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #E2E8F0;
+    border: 1px solid #CBD5E1;
+    font-weight: 600;
+}
+
+.arrow{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.merge{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.final{
+    background-color: #DCFCE7;
+    border-color: #22C55E;
+}
+
+.pipelineInfo{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin: 20px;
 }

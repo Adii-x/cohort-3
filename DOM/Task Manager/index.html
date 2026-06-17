@@ -27,7 +27,65 @@
       </nav>
 
       <div class="container">
-        <section class="left"></section>
+        <section class="left">
+          <div class="propagation">
+            <h3>Event Propagation</h3>
+
+            <div id="bubbling">
+              <h4>Event Bubbling</h4>
+              <button id="bubbleBtn">Bubbling</button>
+            </div>
+
+            <div id="capturing">
+              <h4>Event Capturing</h4>
+              <button id="captureBtn">Capturing</button>
+            </div>
+          </div>
+
+          <div class="attr">
+            <h3>Attributes vs Properties</h3>
+
+            <input
+              type="text"
+              id="demoInp"
+              value="Initial Value"
+              placeholder="Type something..."
+            />
+
+            <button id="checkVal">Check Difference</button>
+
+            <p>Open Console and click the button.</p>
+          </div>
+
+          <div class="renderPipeline">
+            <h3>Browser Rendering Pipeline</h3>
+
+            <div class="step">HTML</div>
+            <div class="arrow">↓</div>
+
+            <div class="step">Parsing</div>
+            <div class="arrow">↓</div>
+
+            <div class="step">Tokenization</div>
+            <div class="arrow">↓</div>
+
+            <div class="step">DOM Tree</div>
+
+            <div class="merge">+</div>
+
+            <div class="step">CSSOM Tree</div>
+
+            <div class="arrow">↓</div>
+
+            <div class="step final">Render Tree</div>
+          </div>
+
+          <p class="pipelineInfo">
+            HTML is parsed into a DOM Tree. CSS is parsed into a CSSOM Tree.
+            Both trees combine to create the Render Tree, which the browser uses
+            to paint elements on the screen.
+          </p>
+        </section>
 
         <section id="divide"></section>
 
@@ -40,14 +98,11 @@
           </div>
 
           <div class="taskCont"></div>
-
         </section>
       </div>
 
       <div class="form">
-
         <form>
-          
           <div>
             <h1>Create Task</h1>
             <p id="close"><i class="ri-close-fill"></i></p>
@@ -75,11 +130,8 @@
             Create Task
             <span><i class="ri-arrow-drop-right-line"></i></span>
           </button>
-
         </form>
-
       </div>
-
     </main>
 
     <script src="script.js"></script>

@@ -103,3 +103,63 @@ form.addEventListener('submit', (e) =>{
 
     formDiv.style.display = "none";
 })
+
+// EVENT BUBBLING DEMO
+
+const bubblingDiv = document.querySelector("#bubbling");
+const bubbleBtn = document.querySelector("#bubbleBtn");
+const propagationBox = document.querySelector(".propagation");
+
+bubbleBtn.addEventListener("click", () => {
+    console.log("Bubble Btn Clicked");
+});
+
+bubblingDiv.addEventListener("click", () => {
+    console.log("Parent Div - Border Clicked");
+});
+
+propagationBox.addEventListener("click", () => {
+    console.log("Grandparent Div - Conatinng All this propagation clicked");
+});
+
+
+// EVENT CAPTURING DEMO
+
+const capturingDiv = document.querySelector("#capturing");
+const captureBtn = document.querySelector("#captureBtn");
+
+captureBtn.addEventListener(
+    "click",
+    () => {
+        console.log("Button");
+    },
+    true
+);
+
+capturingDiv.addEventListener(
+    "click",
+    () => {
+        console.log("Parent Div");
+    },
+    true
+);
+
+propagationBox.addEventListener(
+    "click",
+    () => {
+        console.log("Grandparent Container");
+    },
+    true
+);
+
+// .value and getAttribuate 
+
+const demoInp = document.querySelector("#demoInp");
+const checkVal = document.querySelector("#checkVal");
+
+checkVal.addEventListener("click", () => {
+
+    console.log(".value -", demoInp.value);
+    console.log("getAttribuate -" ,demoInp.getAttribute("value"));
+
+});

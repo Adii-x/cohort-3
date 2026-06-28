@@ -1,0 +1,162 @@
+/* ---------- Google Font ---------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* ---------- Variables ---------- */
+
+:root {
+  --bg: #f5f5f5;
+  --card: rgba(255, 255, 255, 0.65);
+  --text: #1f2937;
+  --text-light: #6b7280;
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --border: rgba(255, 255, 255, 0.45);
+}
+
+/* ---------- Reset ---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ---------- Decorative Circles ---------- */
+
+.background-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(10px);
+  opacity: 0.4;
+}
+
+.circle1 {
+  width: 320px;
+  height: 320px;
+  background: #a5b4fc;
+  top: -100px;
+  left: -80px;
+}
+
+.circle2 {
+  width: 260px;
+  height: 260px;
+  background: #bfdbfe;
+  bottom: -80px;
+  right: -70px;
+}
+
+/* ---------- Glass Card ---------- */
+
+.login-container {
+  width: 400px;
+  padding: 40px;
+  background: var(--card);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+}
+
+/* ---------- Heading ---------- */
+
+h1 {
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--text-light);
+  margin-bottom: 35px;
+  line-height: 1.5;
+}
+
+/* ---------- Inputs ---------- */
+
+.input-group {
+  margin-bottom: 22px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: rgba(255, 255, 255, 0.65);
+  outline: none;
+  font-size: 15px;
+  transition: 0.25s;
+}
+
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+}
+
+/* ---------- Button ---------- */
+
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+/* ---------- Bottom Text ---------- */
+
+.signup-text {
+  margin-top: 28px;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.signup-text a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 480px) {
+  .login-container {
+    width: 90%;
+    padding: 30px;
+  }
+}

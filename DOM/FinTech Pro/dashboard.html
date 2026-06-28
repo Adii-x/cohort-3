@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FinTrack Pro | Dashboard</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="common.css" />
+  </head>
+
+  <body>
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+      <div>
+        <div class="logo">
+          <i class="fa-solid fa-layer-group"></i>
+
+          <div>
+            <h2>FinTrack Pro</h2>
+            <p>Enterprise Finance</p>
+          </div>
+        </div>
+
+        <nav>
+          <a href="#" class="active">
+            <i class="fa-solid fa-table-columns"></i>
+            Dashboard
+          </a>
+
+          <a href="settings.html">
+            <i class="fa-solid fa-gear"></i>
+            Settings
+          </a>
+        </nav>
+      </div>
+
+      <button class="add-btn">
+        <i class="fa-solid fa-plus"></i>
+        Add Transaction
+      </button>
+    </aside>
+
+    <!-- ================= Main ================= -->
+
+    <main class="main-content">
+      <!-- Navbar -->
+
+      <header class="navbar">
+        <div>
+          <h1>Financial Overview</h1>
+
+          <p>Track your income and expenses effortlessly.</p>
+        </div>
+
+        <div class="nav-right">
+          <!-- Theme Toggle -->
+
+          <button class="theme-btn">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+
+          <span class="username"> Aditya </span>
+
+          <button class="logout-btn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+          </button>
+        </div>
+      </header>
+
+      <!-- ================= Cards ================= -->
+
+      <section class="cards">
+        <div class="card">
+          <div class="icon balance">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+
+          <h4>Current Balance</h4>
+
+          <h2>$12,450</h2>
+
+          <p>Available Balance</p>
+        </div>
+
+        <div class="card">
+          <div class="icon income">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+          </div>
+
+          <h4>Total Income</h4>
+
+          <h2>$18,200</h2>
+
+          <p>This Month</p>
+        </div>
+
+        <div class="card">
+          <div class="icon expense">
+            <i class="fa-solid fa-arrow-trend-down"></i>
+          </div>
+
+          <h4>Total Expense</h4>
+
+          <h2>$5,750</h2>
+
+          <p>This Month</p>
+        </div>
+
+        <div class="card">
+          <div class="icon saving">
+            <i class="fa-solid fa-piggy-bank"></i>
+          </div>
+
+          <h4>Total Savings</h4>
+
+          <h2>$6,700</h2>
+
+          <p>55% Saved</p>
+        </div>
+      </section>
+
+      <!-- ================= Chart ================= -->
+
+      <section class="chart-card">
+        <div class="section-title">
+          <h2>Cash Flow Analysis</h2>
+
+          <p>Income vs Expenses</p>
+        </div>
+
+        <canvas id="cashChart"></canvas>
+      </section>
+
+      <!-- ================= Transactions ================= -->
+
+      <section class="transaction-card">
+        <div class="table-header">
+          <div>
+            <h2>Recent Transactions</h2>
+
+            <p>Latest financial activities</p>
+          </div>
+
+          <input type="text" placeholder="Search transaction..." />
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+
+              <th>Description</th>
+
+              <th>Category</th>
+
+              <th>Amount</th>
+
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>28 Jun 2026</td>
+
+              <td>Salary</td>
+
+              <td><span class="badge">Income</span></td>
+
+              <td class="income-text">+$10,000</td>
+
+              <td>
+                <i class="fa-solid fa-pen edit"></i>
+
+                <i class="fa-solid fa-trash delete"></i>
+              </td>
+            </tr>
+
+            <tr>
+              <td>26 Jun 2026</td>
+
+              <td>Netflix</td>
+
+              <td><span class="badge expense-badge">Subscription</span></td>
+
+              <td class="expense-text">-$19</td>
+
+              <td>
+                <i class="fa-solid fa-pen edit"></i>
+
+                <i class="fa-solid fa-trash delete"></i>
+              </td>
+            </tr>
+
+            <tr>
+              <td>25 Jun 2026</td>
+
+              <td>Groceries</td>
+
+              <td><span class="badge expense-badge">Food</span></td>
+
+              <td class="expense-text">-$120</td>
+
+              <td>
+                <i class="fa-solid fa-pen edit"></i>
+
+                <i class="fa-solid fa-trash delete"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

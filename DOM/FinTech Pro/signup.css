@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg: #f5f5f5;
+  --card: rgba(255, 255, 255, 0.7);
+  --text: #1f2937;
+  --text-light: #6b7280;
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --border: rgba(255, 255, 255, 0.55);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Background Shapes */
+
+.background-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.35;
+  filter: blur(15px);
+}
+
+.circle1 {
+  width: 320px;
+  height: 320px;
+  background: #a5b4fc;
+  top: -120px;
+  left: -80px;
+}
+
+.circle2 {
+  width: 260px;
+  height: 260px;
+  background: #bfdbfe;
+  bottom: -80px;
+  right: -70px;
+}
+
+/* Card */
+
+.signup-container {
+  width: 420px;
+  padding: 42px;
+  border-radius: 22px;
+  background: var(--card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+}
+
+h1 {
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+/* Inputs */
+
+.input-group {
+  margin-bottom: 22px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: rgba(255, 255, 255, 0.75);
+  outline: none;
+  transition: 0.25s;
+  font-size: 15px;
+}
+
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+}
+
+/* Button */
+
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+/* Bottom Text */
+
+.login-text {
+  margin-top: 28px;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.login-text a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .signup-container {
+    width: 90%;
+    padding: 30px;
+  }
+}

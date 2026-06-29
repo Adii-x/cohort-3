@@ -71,7 +71,6 @@
 
           <button class="logout-btn">
             <i class="fa-solid fa-right-from-bracket"></i>
-
             Logout
           </button>
         </div>
@@ -87,7 +86,7 @@
 
           <h4>Current Balance</h4>
 
-          <h2>$12,450</h2>
+          <h2 id="currentBalance">$0</h2>
 
           <p>Available Balance</p>
         </div>
@@ -99,7 +98,7 @@
 
           <h4>Total Income</h4>
 
-          <h2>$18,200</h2>
+          <h2 id="totalIncome">$0</h2>
 
           <p>This Month</p>
         </div>
@@ -111,7 +110,7 @@
 
           <h4>Total Expense</h4>
 
-          <h2>$5,750</h2>
+          <h2 id="totalExpense">$0</h2>
 
           <p>This Month</p>
         </div>
@@ -123,7 +122,7 @@
 
           <h4>Total Savings</h4>
 
-          <h2>$6,700</h2>
+          <h2 id="totalSavings">$0</h2>
 
           <p>55% Saved</p>
         </div>
@@ -138,7 +137,7 @@
           <p>Income vs Expenses</p>
         </div>
 
-        <canvas id="cashChart"></canvas>
+        <canvas id="cashChart" width="400" height="320"></canvas>
       </section>
 
       <!-- ================= Transactions ================= -->
@@ -169,57 +168,86 @@
             </tr>
           </thead>
 
-          <tbody>
-            <tr>
-              <td>28 Jun 2026</td>
-
-              <td>Salary</td>
-
-              <td><span class="badge">Income</span></td>
-
-              <td class="income-text">+$10,000</td>
-
-              <td>
-                <i class="fa-solid fa-pen edit"></i>
-
-                <i class="fa-solid fa-trash delete"></i>
-              </td>
-            </tr>
-
-            <tr>
-              <td>26 Jun 2026</td>
-
-              <td>Netflix</td>
-
-              <td><span class="badge expense-badge">Subscription</span></td>
-
-              <td class="expense-text">-$19</td>
-
-              <td>
-                <i class="fa-solid fa-pen edit"></i>
-
-                <i class="fa-solid fa-trash delete"></i>
-              </td>
-            </tr>
-
-            <tr>
-              <td>25 Jun 2026</td>
-
-              <td>Groceries</td>
-
-              <td><span class="badge expense-badge">Food</span></td>
-
-              <td class="expense-text">-$120</td>
-
-              <td>
-                <i class="fa-solid fa-pen edit"></i>
-
-                <i class="fa-solid fa-trash delete"></i>
-              </td>
-            </tr>
-          </tbody>
+          <tbody id="cont"></tbody>
         </table>
       </section>
     </main>
+
+    <!-- ===========================
+                TRANSACTION 
+        =========================== -->
+
+    <div class="overlay">
+      <div class="transaction-modal">
+        <div class="modal-header">
+          <h2>Add Transaction</h2>
+
+          <button class="close-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <form id="transactionForm">
+          <div class="form-group">
+            <label>Transaction Name</label>
+
+            <input type="text" placeholder="e.g. Salary" id="transactionName" />
+          </div>
+
+          <div class="form-group">
+            <label>Amount</label>
+
+            <input type="number" placeholder="$0.00" id="transactionAmount" />
+          </div>
+
+          <div class="double-input">
+            <div class="form-group">
+              <label>Type</label>
+
+              <select id="transactionType">
+                <option>Income</option>
+
+                <option>Expense</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Category</label>
+
+              <select id="transactionCategory">
+                <option>Salary</option>
+
+                <option>Food</option>
+
+                <option>Shopping</option>
+
+                <option>Bills</option>
+
+                <option>Travel</option>
+
+                <option>Entertainment</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Date</label>
+
+            <input type="date" id="transactionDate" />
+          </div>
+
+          <div class="modal-buttons">
+            <button type="button" class="cancel-btn">Cancel</button>
+
+            <button id="transaction-add" type="submit" class="submit-btn">
+              Add Transaction
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
   </body>
 </html>

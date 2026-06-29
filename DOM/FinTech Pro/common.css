@@ -20,26 +20,18 @@
   --danger: #dc2626;
 }
 
-/* ===============================
-        GOOGLE FONT
-================================= */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
-
-/* ===============================
-        VARIABLES
-================================= */
-:root {
-  --bg: #f5f5f5;
-  --sidebar: #efefef;
-  --navbar: #f8f8f8;
-  --card: #ffffff;
-  --text: #1f2937;
-  --text-secondary: #6b7280;
-  --border: #e5e7eb;
-  --primary: #4f46e5;
-  --primary-hover: #4338ca;
-  --success: #16a34a;
-  --danger: #dc2626;
+body.dark {
+  --bg: #111111;
+  --sidebar: #171717;
+  --navbar: #1a1a1a;
+  --card: #1e1e1e;
+  --text: #f5f5f5;
+  --text-secondary: #c7c7c7;
+  --border: #333333;
+  --primary: #5b5bea;
+  --primary-hover: #7070f5;
+  --success: #22c55e;
+  --danger: #ef4444;
 }
 
 /* ===============================
@@ -352,6 +344,10 @@ th {
 td {
   padding: 18px 16px;
   border-bottom: 1px solid var(--border);
+}
+
+tr{
+  color: var();
 }
 
 .badge {
@@ -783,6 +779,10 @@ td {
   border-bottom: 1px solid var(--border);
 }
 
+tr{
+  color: var(--text);
+}
+
 .badge {
   background: #dcfce7;
   color: var(--success);
@@ -898,4 +898,170 @@ td {
 
 .save-btn i {
   margin-right: 8px;
+}
+
+/* ===========================
+        MODAL
+=========================== */
+
+.overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  display: none;
+
+  justify-content: center;
+
+  align-items: center;
+
+  backdrop-filter: blur(3px);
+
+  z-index: 999;
+}
+
+.transaction-modal {
+  width: 500px;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  padding: 30px;
+
+  animation: popup 0.25s ease;
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.9);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.modal-header h2 {
+  color: var(--text);
+}
+
+.close-btn {
+  width: 40px;
+
+  height: 40px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: var(--bg);
+
+  cursor: pointer;
+
+  color: var(--text);
+}
+
+.double-input {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+
+  color: var(--text);
+
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  padding: 13px 15px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary);
+}
+
+.modal-buttons {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.cancel-btn {
+  padding: 12px 24px;
+
+  border: 1px solid var(--border);
+
+  background: transparent;
+
+  color: var(--text);
+
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.submit-btn {
+  padding: 12px 24px;
+
+  border: none;
+
+  background: var(--primary);
+
+  color: white;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: var(--primary-hover);
 }

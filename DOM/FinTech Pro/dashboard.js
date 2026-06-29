@@ -33,7 +33,7 @@ logoutBtn.addEventListener("click", () => {
 
   if (!res) return;
 
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 });
 
 // Add transcation

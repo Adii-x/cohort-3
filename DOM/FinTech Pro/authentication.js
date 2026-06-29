@@ -83,7 +83,7 @@ if (signUp) {
 
     if (res) {
       alert("User Created Successfully!!");
-      window.location.href = "login.html";
+      window.location.href = "index.html";
     }
   });
 }

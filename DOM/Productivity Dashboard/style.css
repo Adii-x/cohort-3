@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  /* Surfaces */
+  --bg-base: #fafaf9; /* warm off-white, not stark #FFF */
+  --bg-surface: #ffffff;
+  --bg-sunken: #f1f0ee; /* inputs, subtle recesses */
+  --border: #e7e5e2;
+
+  /* Text */
+  --text-primary: #26241f; /* warm near-black, not pure #000 */
+  --text-secondary: #6b6862;
+  --text-muted: #a5a29b;
+
+  /* Accent — used sparingly, not everywhere */
+  --accent: #3d5a45; /* muted forest green, quiet confidence */
+  --accent-hover: #2f4636;
+  --accent-soft: #e9ede9; /* tinted background for active states */
+
+  /* Status — desaturated, not neon */
+  --success: #4e7c59;
+  --warning: #b8863b;
+  --danger: #a34a3f;
+
+  --shadow: 0 1px 2px rgba(38, 36, 31, 0.04), 0 4px 10px rgba(38, 36, 31, 0.05);
+
+  /* spacing */
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* border */
+
+  --border: #d8d5cf; /* was #E7E5E2 — now visible against both white surface and off-white page */
+  --border-strong: #c7c3bb; /* for emphasis: focus states, active card, table header divider */
+}
+
+[data-theme="dark"] {
+  --bg-base: #171614; /* warm charcoal, not blue-black */
+  --bg-surface: #201f1c;
+  --bg-sunken: #131211;
+  --border: #33322d;
+
+  --text-primary: #edebe6;
+  --text-secondary: #a7a49d;
+  --text-muted: #6e6b64;
+
+  --accent: #7fa588; /* same hue family, lifted for contrast */
+  --accent-hover: #93b79c;
+  --accent-soft: #223028;
+
+  --success: #7fa588;
+  --warning: #d3a45f;
+  --danger: #c97a6d;
+
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 16px rgba(0, 0, 0, 0.35);
+
+  /* border */
+
+  --border: #3d3b35; /* was #33322D — lifted so it reads against the dark surface too */
+  --border-strong: #4c4a42;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-base);
+  padding: var(--spacing-md);
+  transition: all 0.3s ease;
+}
+
+header {
+  background-color: var(--bg-surface);
+  border-radius: var(--spacing-sm);
+  box-shadow: var(--shadow);
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 35px;
+  user-select: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+#container {
+  height: 91%;
+  width: 100%;
+  display: flex;
+  padding: var(--spacing-sm) 0;
+  gap: var(--spacing-sm);
+  margin-top: 5px;
+}
+
+#dashboard {
+  width: 95%;
+  height: 100%;
+  border-radius: var(--spacing-sm);
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+#navigation {
+  height: 100%;
+  width: 5%;
+  border-radius: var(--spacing-sm);
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  transition: all 0.3s ease;
+}
+
+.box {
+  font-size: 25px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.box:hover {
+  transform: scale(1.1);
+  background-color: var(--bg-sunken);
+}

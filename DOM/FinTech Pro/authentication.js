@@ -35,7 +35,8 @@ if (login) {
 
     if (res) {
       login.reset();
-      window.location.href = "dashboard.html";
+      window.location.href = "dashboard.
+      ";
     } else {
         login.reset();
     }

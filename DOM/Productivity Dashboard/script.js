@@ -29,3 +29,18 @@ themeBtn.addEventListener("click", () => {
   const current = main.getAttribute("data-theme") === "dark" ? "dark" : "light";
   setTheme(current);
 });
+
+
+/* Quote generation */
+
+const quoteText = document.querySelector("#quote-text");
+const quoteAuthor = document.querySelector("#quote-author");
+
+async function setQuote() {
+  const res = await fetch("https://dummyjson.com/quotes/random");
+  const data = await res.json();
+  quoteText.textContent = `"${data.quote}"`;
+  quoteAuthor.textContent = `-- ${data.author}`
+}
+
+setQuote();

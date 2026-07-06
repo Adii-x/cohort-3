@@ -17,10 +17,21 @@
       </header>
 
       <section id="container">
-        <div id="dashboard"></div>
+        <div id="dashboard">
+          <div class="dashboard-top">
+            <div class="timer"></div>
+            <div class="weather"></div>
+          </div>
+
+          <div class="dashboard-btm">
+            <div class="quote">
+              <p><span id="quote-text"></span></p>
+              <div class="author"><span id="quote-author"></span></div>
+            </div>
+          </div>
+        </div>
 
         <div id="navigation">
-
           <div class="box" id="dashboard-btn">
             <i class="ri-dashboard-line"></i>
           </div>
@@ -44,14 +55,10 @@
           <div class="box" id="dailyGoals-btn">
             <i class="ri-target-line"></i>
           </div>
-
         </div>
-
       </section>
-
     </main>
 
     <script src="script.js"></script>
-
   </body>
 </html>

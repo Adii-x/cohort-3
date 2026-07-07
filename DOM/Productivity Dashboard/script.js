@@ -30,81 +30,22 @@ themeBtn.addEventListener("click", () => {
   setTheme(current);
 });
 
-/* Quote generation */
 
-const quoteText = document.querySelector("#quote-text");
-const quoteAuthor = document.querySelector("#quote-author");
+/* Navigation */
 
-async function setQuote() {
-  const res = await fetch("https://dummyjson.com/quotes/random");
-  const data = await res.json();
-  quoteText.textContent = `"${data.quote}"`;
-  quoteAuthor.textContent = `-- ${data.author}`;
-}
+const navBtns = document.querySelectorAll('.box')
 
-setQuote();
+const pages = {
+  "dashboard-btn": "index.html",
+  "todo-btn": "todo.html",
+  "dailyPlanner-btn": "dailyPlanner.html",
+  "pomodoro-btn": "pomodoro.html",
+  "dailyGoals-btn": "dailyPlanner.html",
+};
 
-/* Date and Time  */
-
-const clock = document.querySelector("#clock");
-const date = document.querySelector("#calander");
-
-function updateClock() {
-  const now = new Date();
-
-  // Require components
-  let hr = now.getHours();
-  let min = now.getMinutes();
-  let sec = now.getSeconds();
-
-  // Format numbers to always show two digits
-  hr = String(hr).padStart(2, "0");
-  min = String(min).padStart(2, "0");
-  sec = String(sec).padStart(2, "0");
-
-  clock.textContent = `${hr} : ${min} : ${sec}`;
-}
-
-function updateDate() {
-  const now = new Date();
-
-  let dateNum = now.getDate();
-
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  const days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-
-  let monthName = months[now.getMonth()];
-  let dayName = days[now.getDay()];
-
-  date.textContent = `${dateNum} ${monthName} ${dayName}`;
-}
-
-updateClock();
-updateDate();
-
-// setInterval(() => {
-//   updateClock();
-//   updateDate();
-// }, 1000);
-
+navBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const page = pages[btn.id];
+    if (page) window.location.href = page;
+  });
+});

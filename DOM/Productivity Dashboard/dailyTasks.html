@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Porductivity Dashboard</title>
+    <title>Daily Tasks</title>
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
@@ -17,31 +17,7 @@
       </header>
 
       <section id="container">
-
-        <div id="dashboard">
-
-          <div class="dashboard-top">
-
-            <div class="timer">
-                <div class="time">
-                    <span id="clock">00 : 00 : 00</span>
-                </div>
-                <div class="date">
-                    <span id="calander">6 June Saturday</span>
-                </div>
-            </div>
-
-            <div class="weather"></div>
-
-          </div>
-
-          <div class="dashboard-btm">
-            <div class="quote">
-              <p><span id="quote-text"></span></p>
-              <div class="author"><span id="quote-author"></span></div>
-            </div>
-          </div>
-        </div>
+        <div id="dashboard"></div>
 
         <div id="navigation">
           <div class="box" id="dashboard-btn">
@@ -70,8 +46,6 @@
         </div>
       </section>
     </main>
-
-    <script src="dashboard.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo</title>
-    <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="todo.css" />
   </head>
   <body>
     <main>
@@ -17,7 +18,33 @@
       </header>
 
       <section id="container">
-        <div id="dashboard"></div>
+        <div id="dashboard">
+          <div class="todo-container">
+            <div class="todo-header">
+              <h2>Todo List</h2>
+
+              <div class="todo-input">
+                <input
+                  type="text"
+                  id="task-input"
+                  placeholder="Add a new task..."
+                />
+
+                <button id="add-task">
+                  <i class="ri-add-line"></i>
+                  Add Task
+                </button>
+              </div>
+            </div>
+
+            <div class="todo-list-container">
+              <ul id="todo-list">
+                <!-- JS will create tasks here -->
+                
+              </ul>
+            </div>
+          </div>
+        </div>
 
         <div id="navigation">
           <div class="box" id="dashboard-btn">
@@ -47,5 +74,6 @@
       </section>
     </main>
     <script src="script.js"></script>
+    <script src="todo.js"></script>
   </body>
 </html>

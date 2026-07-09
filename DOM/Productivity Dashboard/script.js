@@ -40,7 +40,7 @@ const pages = {
   "todo-btn": "todo.html",
   "dailyPlanner-btn": "dailyPlanner.html",
   "pomodoro-btn": "pomodoro.html",
-  "dailyGoals-btn": "dailyPlanner.html",
+  "dailyGoals-btn": "dailyTasks.html",
 };
 
 navBtns.forEach((btn) => {

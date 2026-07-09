@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daily Tasks</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dailyTasks.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -17,7 +18,37 @@
       </header>
 
       <section id="container">
-        <div id="dashboard"></div>
+        <div id="dashboard">
+          <div class="goals">
+            <div class="goals-header">
+              <div>
+                <h2>Daily Goals</h2>
+                <p>Stay focused. Complete what matters today.</p>
+              </div>
+
+              <div class="progress-card">
+                <span id="progress">0 / 0 Completed</span>
+              </div>
+            </div>
+
+            <div class="goal-input">
+              <input
+                type="text"
+                id="goal-input"
+                placeholder="Enter today's goal..."
+              />
+
+              <button id="add-goal">
+                <i class="ri-add-line"></i>
+                Add Goal
+              </button>
+            </div>
+
+            <div class="goal-list">
+              <!-- Goals will be rendered here -->
+            </div>
+          </div>
+        </div>
 
         <div id="navigation">
           <div class="box" id="dashboard-btn">
@@ -47,5 +78,6 @@
       </section>
     </main>
     <script src="script.js"></script>
+    <script src="dailyTasks.js"></script>
   </body>
 </html>

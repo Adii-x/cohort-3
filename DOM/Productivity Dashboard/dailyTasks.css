@@ -1,0 +1,222 @@
+/* ===========================
+        DAILY GOALS
+=========================== */
+
+.goals {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: var(--spacing-xl);
+  gap: var(--spacing-lg);
+}
+
+/* Header */
+
+.goals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: var(--spacing-md);
+
+  border-bottom: 2px solid var(--border);
+}
+
+.goals-header h2 {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+}
+
+.goals-header p {
+  margin-top: 5px;
+  color: var(--text-secondary);
+}
+
+.progress-card {
+  padding: 12px 24px;
+
+  border: 1px solid var(--border);
+  border-radius: var(--spacing-sm);
+
+  background: var(--accent-soft);
+
+  color: var(--accent);
+
+  font-weight: 600;
+}
+
+/* Input */
+
+.goal-input {
+  display: flex;
+  gap: 16px;
+}
+
+.goal-input input {
+  flex: 1;
+
+  height: 55px;
+
+  border: 1px solid var(--border);
+  border-radius: var(--spacing-sm);
+
+  outline: none;
+
+  padding: 0 18px;
+
+  background: var(--bg-sunken);
+
+  color: var(--text-primary);
+
+  font-size: 1rem;
+
+  transition: 0.3s;
+}
+
+.goal-input input:focus {
+  border-color: var(--accent);
+}
+
+.goal-input input::placeholder {
+  color: var(--text-muted);
+}
+
+.goal-input button {
+  width: 170px;
+
+  border: none;
+
+  border-radius: var(--spacing-sm);
+
+  background: var(--accent);
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  transition: 0.3s;
+}
+
+.goal-input button:hover {
+  background: var(--accent-hover);
+}
+
+/* Goal List */
+
+.goal-list {
+  flex: 1;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+
+  padding-right: 8px;
+}
+
+/* Single Goal */
+
+.goal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 22px;
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--spacing-sm);
+
+  background: var(--bg-surface);
+
+  transition: 0.25s;
+}
+
+.goal:hover {
+  border-color: var(--accent);
+}
+
+.goal-left {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  flex: 1;
+}
+
+.goal-left input {
+  width: 22px;
+  height: 22px;
+
+  cursor: pointer;
+
+  accent-color: var(--accent);
+}
+
+.goal-text {
+  font-size: 1.1rem;
+
+  color: var(--text-primary);
+
+  transition: 0.25s;
+}
+
+.goal.completed .goal-text {
+  text-decoration: line-through;
+
+  color: var(--text-muted);
+}
+
+.delete-goal {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  background: transparent;
+
+  color: var(--danger);
+
+  font-size: 1.3rem;
+
+  transition: 0.3s;
+}
+
+.delete-goal:hover {
+  background: var(--danger);
+
+  color: white;
+}
+
+/* Scrollbar */
+
+.goal-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.goal-list::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 20px;
+}
+
+.goal-list::-webkit-scrollbar-track {
+  background: transparent;
+}

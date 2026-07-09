@@ -20,6 +20,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 :root {
@@ -86,15 +87,23 @@ body {
   --border-strong: #4c4a42;
 }
 
+body {
+  background: var(--bg-base);
+}
+
 main {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-color: var(--bg-base);
   padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
   transition: all 0.3s ease;
 }
 
 header {
+  flex: 0 0 auto;
   background-color: var(--bg-surface);
   border-radius: var(--spacing-sm);
   box-shadow: var(--shadow);
@@ -106,24 +115,26 @@ header {
 h1 {
   color: var(--text-primary);
   font-weight: 600;
-  font-size: 35px;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
   user-select: none;
   text-align: center;
   transition: all 0.3s ease;
 }
 
 #container {
-  height: 91%;
+  flex: 1 1 auto;
+  min-height: 0;
   width: 100%;
   display: flex;
   padding: var(--spacing-sm) 0;
   gap: var(--spacing-sm);
-  margin-top: 5px;
+  overflow: hidden;
 }
 
 #dashboard {
-  width: 95%;
-  height: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
   border-radius: var(--spacing-sm);
   background-color: var(--bg-surface);
   box-shadow: var(--shadow);
@@ -132,8 +143,8 @@ h1 {
 }
 
 #navigation {
-  height: 100%;
-  width: 5%;
+  flex: 0 0 clamp(88px, 8vw, 110px);
+  min-width: clamp(88px, 8vw, 110px);
   border-radius: var(--spacing-sm);
   background-color: var(--bg-surface);
   box-shadow: var(--shadow);
@@ -148,8 +159,8 @@ h1 {
 
 .box {
   font-size: 25px;
-  height: 50px;
-  width: 50px;
+  height: clamp(44px, 4.4vw, 50px);
+  width: clamp(44px, 4.4vw, 50px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,9 +172,20 @@ h1 {
   transform: scale(1);
 }
 
+.box:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .box:hover {
   transform: scale(1.1);
   background-color: var(--bg-sunken);
+}
+
+.box.is-active {
+  background-color: var(--accent-soft);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 #dashboard {
@@ -174,21 +196,24 @@ h1 {
 
 .dashboard-top {
   width: 100%;
-  height: 60%;
+  flex: 1 1 auto;
+  min-height: 0;
   display: flex;
   justify-content: space-between;
   padding: var(--spacing-lg);
+  gap: var(--spacing-md);
 }
 
 .dashboard-btm {
   width: 100%;
-  height: 40%;
+  flex: 0 0 38%;
+  min-height: 0;
   padding: var(--spacing-lg);
 }
 
 .timer {
-  height: 100%;
-  width: 45%;
+  flex: 1 1 0;
+  min-width: 0;
   border-radius: var(--spacing-sm);
   background-color: var(--bg-surface);
   box-shadow: var(--shadow);
@@ -204,7 +229,7 @@ h1 {
   width: 100%;
   height: 60%;
   border-bottom: 2px solid var(--border);
-  font-size: 100px;
+  font-size: clamp(3rem, 8vw, 6rem);
   text-align: center;
   padding-top: 20px;
   color: var(--text-secondary);
@@ -214,7 +239,7 @@ h1 {
 .date {
   width: 100%;
   height: 40%;
-  font-size: 60px;
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -224,8 +249,8 @@ h1 {
 }
 
 .weather {
-  height: 100%;
-  width: 45%;
+  flex: 1 1 0;
+  min-width: 0;
   border-radius: var(--spacing-sm);
   background-color: var(--bg-surface);
   box-shadow: var(--shadow);
@@ -250,7 +275,7 @@ h1 {
 }
 
 .quote p {
-  font-size: 35px;
+  font-size: clamp(1.35rem, 2.4vw, 2.2rem);
   text-align: center;
   line-height: 45px;
 }
@@ -260,56 +285,146 @@ h1 {
   margin-top: 15px;
 }
 
-.weather{
-    width:45%;
-    height:100%;
-
-    display:flex;
-    flex-direction:column;
-
-    padding:2rem;
+.weather {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.25rem, 2vw, 2rem);
 }
 
-.weather-city{
-    font-size:2.3rem;
-    font-weight:700;
-    color:var(--text-secondary);
+.weather-city {
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+  font-weight: 700;
+  color: var(--text-secondary);
 }
 
-.weather-condition{
-    margin-top:.3rem;
-    font-size:1.3rem;
-    color:var(--text-secondary);
+.weather-condition {
+  margin-top: 0.3rem;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--text-secondary);
 }
 
-.weather-temp{
-    flex:1;
+.weather-temp {
+  flex: 1;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    font-size:6rem;
-    font-weight:600;
+  font-size: clamp(3.25rem, 7vw, 6rem);
+  font-weight: 600;
 
-    color:var(--accent);
+  color: var(--accent);
 }
 
-.weather-info{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.weather-info div{
-    display:flex;
-    align-items:center;
-    gap:.5rem;
+.weather-info div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 
-    font-size:1.3rem;
-    color:var(--text-secondary);
+  font-size: clamp(1rem, 1.9vw, 1.3rem);
+  color: var(--text-secondary);
 }
 
-.weather-info i{
-    font-size:1.6rem;
+.weather-info i {
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+}
+
+@media (max-width: 1024px) {
+  #navigation {
+    flex-basis: 80px;
+    min-width: 80px;
+    padding: var(--spacing-md) 0;
+  }
+
+  .dashboard-top {
+    flex-direction: column;
+  }
+
+  .timer,
+  .weather {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: var(--spacing-sm);
+    padding-bottom: calc(var(--spacing-sm) + 92px);
+  }
+
+  #container {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  #dashboard {
+    order: 1;
+    width: 100%;
+  }
+
+  #navigation {
+    order: 2;
+    position: fixed;
+    left: var(--spacing-sm);
+    right: var(--spacing-sm);
+    bottom: var(--spacing-sm);
+    width: auto;
+    min-width: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 18px;
+    z-index: 20;
+  }
+
+  .box {
+    flex: 1 1 0;
+    max-width: 52px;
+  }
+
+  .dashboard-top,
+  .dashboard-btm {
+    padding: var(--spacing-md);
+  }
+
+  .dashboard-btm {
+    flex-basis: auto;
+  }
+
+  .quote {
+    padding: var(--spacing-md);
+  }
+
+  .quote p {
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-top,
+  .dashboard-btm {
+    padding: var(--spacing-sm);
+  }
+
+  .time {
+    padding-top: 12px;
+  }
+
+  .weather-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .weather-info div {
+    width: 100%;
+  }
 }

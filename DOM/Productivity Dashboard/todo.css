@@ -122,7 +122,6 @@
   color: var(--accent);
 }
 
-
 .task.important {
   background: #fff4d6;
   border-color: #e4c46a;
@@ -133,6 +132,53 @@
   border-color: #b8863b;
 }
 
-.task.important .important-btn{
-    color:#D4A017;
+.task.important .important-btn {
+  color: #d4a017;
+}
+
+@media (max-width: 900px) {
+  .todo-container {
+    padding: var(--spacing-lg);
+  }
+
+  .todo-input {
+    flex-direction: column;
+  }
+
+  .todo-input button {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .todo-container {
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+
+  .todo-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .task {
+    align-items: flex-start;
+    gap: 14px;
+    flex-direction: column;
+  }
+
+  .task-left {
+    width: 100%;
+  }
+
+  .task-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .task-text {
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+  }
 }

@@ -30,10 +30,9 @@ themeBtn.addEventListener("click", () => {
   setTheme(current);
 });
 
-
 /* Navigation */
 
-const navBtns = document.querySelectorAll('.box')
+const navBtns = document.querySelectorAll(".box");
 
 const pages = {
   "dashboard-btn": "index.html",
@@ -43,9 +42,26 @@ const pages = {
   "dailyGoals-btn": "dailyTasks.html",
 };
 
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
 navBtns.forEach((btn) => {
+  const page = pages[btn.id];
+
+  btn.setAttribute("role", "button");
+  btn.setAttribute("tabindex", "0");
+
+  if (page && page === currentPage) {
+    btn.classList.add("is-active");
+  }
+
   btn.addEventListener("click", () => {
-    const page = pages[btn.id];
     if (page) window.location.href = page;
+  });
+
+  btn.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      btn.click();
+    }
   });
 });

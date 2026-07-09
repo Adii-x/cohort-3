@@ -122,3 +122,56 @@
   color: white;
   border-color: var(--accent);
 }
+
+@media (max-width: 900px) {
+  .pomodoro {
+    padding: var(--spacing-lg);
+  }
+
+  .timer-controls,
+  .duration-options {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .timer-controls button,
+  .duration-btn {
+    min-width: 140px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .pomodoro {
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+
+  .pomodoro-title {
+    position: static;
+    align-self: flex-start;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+
+  .timer-circle {
+    width: min(72vw, 250px);
+    height: min(72vw, 250px);
+  }
+
+  #timer-display {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+    letter-spacing: 2px;
+  }
+
+  #session-type {
+    margin-top: var(--spacing-md);
+    font-size: 1rem;
+  }
+
+  .timer-controls button,
+  .duration-btn {
+    width: 100%;
+    min-width: 0;
+  }
+}

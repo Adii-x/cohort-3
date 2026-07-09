@@ -1,0 +1,136 @@
+/* ==============================
+        DAILY PLANNER
+=================================*/
+
+.planner{
+    width:100%;
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    padding:var(--spacing-xl);
+    gap:var(--spacing-lg);
+}
+
+.planner-header{
+    border-bottom:2px solid var(--border);
+    padding-bottom:var(--spacing-md);
+}
+
+.planner-header h2{
+    font-size:2.2rem;
+    color:var(--text-primary);
+    font-weight:700;
+}
+
+.planner-header p{
+    margin-top:6px;
+    color:var(--text-secondary);
+    font-size:1rem;
+}
+
+.planner-body{
+    flex:1;
+
+    overflow-y:auto;
+
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+
+    padding-right:10px;
+}
+
+.time-slot{
+    display:grid;
+    grid-template-columns:160px 1fr 60px;
+
+    gap:20px;
+    align-items:center;
+
+    padding:18px;
+
+    border:1px solid var(--border);
+    border-radius:var(--spacing-sm);
+
+    background:var(--bg-surface);
+
+    transition:.25s;
+}
+
+.time-slot:hover{
+    border-color:var(--accent);
+    transform:translateY(-2px);
+}
+
+.slot-time{
+    font-size:1.15rem;
+    font-weight:600;
+    color:var(--text-primary);
+}
+
+.time-slot textarea{
+    resize:none;
+
+    height:70px;
+
+    border:none;
+    outline:none;
+
+    background:var(--bg-sunken);
+
+    border-radius:var(--spacing-sm);
+
+    padding:14px;
+
+    font-size:1rem;
+
+    color:var(--text-primary);
+
+    transition:.3s;
+}
+
+.time-slot textarea::placeholder{
+    color:var(--text-muted);
+}
+
+.time-slot textarea:focus{
+    box-shadow:0 0 0 2px var(--accent-soft);
+}
+
+.clear-btn{
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+    border:1px solid var(--border);
+
+    background:var(--bg-surface);
+
+    color:var(--danger);
+
+    cursor:pointer;
+
+    font-size:1.3rem;
+
+    transition:.3s;
+}
+
+.clear-btn:hover{
+    background:var(--danger);
+    color:white;
+}
+
+.planner-body::-webkit-scrollbar{
+    width:8px;
+}
+
+.planner-body::-webkit-scrollbar-thumb{
+    background:var(--border-strong);
+    border-radius:20px;
+}
+
+.planner-body::-webkit-scrollbar-track{
+    background:transparent;
+}

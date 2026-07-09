@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daily Planner</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dailyPlanner.css">
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -17,7 +18,17 @@
       </header>
 
       <section id="container">
-        <div id="dashboard"></div>
+        <div id="dashboard">
+          <div class="planner">
+            <div class="planner-header">
+              <h2>Daily Planner</h2>
+              <p>Organize your day, one hour at a time.</p>
+            </div>
+
+            <div class="planner-body">
+            </div>
+          </div>
+        </div>
 
         <div id="navigation">
           <div class="box" id="dashboard-btn">
@@ -47,5 +58,6 @@
       </section>
     </main>
     <script src="script.js"></script>
+    <script src="dailyPlanner.js"></script>
   </body>
 </html>

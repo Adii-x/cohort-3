@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pomodoro</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="pomodoro.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -17,7 +18,44 @@
       </header>
 
       <section id="container">
-        <div id="dashboard"></div>
+        <div id="dashboard">
+              <div class="pomodoro">
+                <h2 class="pomodoro-title">POMODORO</h2>
+
+                <div class="timer-circle">
+                  <div id="timer-display">25:00</div>
+                </div>
+
+                <p id="session-type">Work Session</p>
+
+                <div class="timer-controls">
+                  <button id="start-btn">
+                    <i class="ri-play-line"></i>
+                    Start
+                  </button>
+
+                  <button id="pause-btn">
+                    <i class="ri-pause-line"></i>
+                    Pause
+                  </button>
+
+                  <button id="reset-btn">
+                    <i class="ri-reset-left-line"></i>
+                    Reset
+                  </button>
+                </div>
+
+                <div class="duration-options">
+                  <button class="duration-btn active" data-time="25">
+                    25 Min
+                  </button>
+
+                  <button class="duration-btn" data-time="5">5 Min</button>
+
+                  <button class="duration-btn" data-time="15">15 Min</button>
+            </div>
+          </div>
+        </div>
 
         <div id="navigation">
           <div class="box" id="dashboard-btn">
@@ -47,5 +85,6 @@
       </section>
     </main>
     <script src="script.js"></script>
+    <script src="pomodoro.js"></script>
   </body>
 </html>

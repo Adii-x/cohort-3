@@ -1,0 +1,124 @@
+/* ======================
+   Pomodoro UI
+====================== */
+.pomodoro {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Large title top right */
+.pomodoro-title {
+  position: absolute;
+  top: 20px;
+  top: 20px;
+  left: 25px;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  color: var(--text-primary);
+  opacity: 0.9;
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* Timer Circle Design */
+.timer-circle {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 10px solid var(--accent);
+  display: flex;
+  border-radius: 50%;
+  border: 10px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 0 15px var(--accent-soft),
+    var(--shadow);
+}
+#timer-display {
+  font-size: 70px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 3px;
+}
+#session-type {
+  margin-top: var(--spacing-lg);
+  font-size: 22px;
+  color: var(--text-secondary);
+}
+
+/* Main Buttons */
+.timer-controls {
+  margin-top: var(--spacing-lg);
+  display: flex;
+  display: flex;
+  gap: var(--spacing-md);
+}
+.timer-controls button {
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--accent);
+  color: white;
+  transition: 0.3s;
+  transition: 0.3s;
+}
+.timer-controls button:hover {
+  transform: translateY(-3px);
+}
+#pause-btn {
+  background-color: var(--warning);
+}
+#reset-btn {
+  background-color: var(--danger);
+}
+
+/* Duration Selector */
+.duration-options {
+  margin-top: var(--spacing-lg);
+  display: flex;
+  display: flex;
+  gap: var(--spacing-md);
+}
+.duration-btn {
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: 1px solid var(--border);
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  border-radius: 25px;
+  border: 1px solid var(--border);
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.duration-btn:hover,
+.duration-btn.active {
+  background-color: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}

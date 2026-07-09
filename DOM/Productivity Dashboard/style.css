@@ -259,3 +259,57 @@ h1 {
   font-size: 15px;
   margin-top: 15px;
 }
+
+.weather{
+    width:45%;
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    padding:2rem;
+}
+
+.weather-city{
+    font-size:2.3rem;
+    font-weight:700;
+    color:var(--text-secondary);
+}
+
+.weather-condition{
+    margin-top:.3rem;
+    font-size:1.3rem;
+    color:var(--text-secondary);
+}
+
+.weather-temp{
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:6rem;
+    font-weight:600;
+
+    color:var(--accent);
+}
+
+.weather-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.weather-info div{
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+
+    font-size:1.3rem;
+    color:var(--text-secondary);
+}
+
+.weather-info i{
+    font-size:1.6rem;
+}

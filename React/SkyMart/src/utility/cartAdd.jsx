@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const addToCart = (product, cartItems, setCartItems) => {
   const existing = cartItems.find((item) => item.id === product.id);
 
@@ -8,6 +10,8 @@ const addToCart = (product, cartItems, setCartItems) => {
           : item,
       )
     : [...cartItems, { ...product, quantity: 1 }];
+
+  toast.success("Item added to cart");
 
   setCartItems(nextCart);
   localStorage.setItem("cart", JSON.stringify(nextCart));

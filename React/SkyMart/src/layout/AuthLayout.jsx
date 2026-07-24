@@ -1,0 +1,16 @@
+import React from "react";
+import { Outlet } from "react-router";
+import { toast } from "react-toastify";
+
+const AuthLayout = () => {
+
+  
+
+  return (
+    <div>
+      <Outlet />
+    </div>
+  );
+};
+
+export default AuthLayout;

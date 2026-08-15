@@ -6,9 +6,18 @@ export const loginEmployee = createAsyncThunk(
   async (credentials, thunkApi) => {
     try {
       let res = await api.post("/auth/login", credentials);
-      return res.data;
+      return res.data.data;
     } catch (error) {
       return thunkApi.rejectWithValue(error);
     }
   },
 );
+
+export const getMe = createAsyncThunk("auth/get-me", async (_, thunkApi) => {
+  try {
+    let res = await api.get("/auth/me");
+    return res.data.user;
+  } catch (error) {
+    return thunkApi.rejectWithValue(error);
+  }
+});

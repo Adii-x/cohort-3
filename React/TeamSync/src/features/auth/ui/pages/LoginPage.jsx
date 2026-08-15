@@ -34,8 +34,8 @@ export default function LoginPage() {
               </h2>
 
               <p className="mt-4 max-w-xl text-base font-medium leading-relaxed text-slate-200">
-                Join our private network to discover job opportunities and
-                connect with professionals.
+                Simplify content management, streamline your workflow, and keep
+                your digital content organized.
               </p>
             </div>
           </div>

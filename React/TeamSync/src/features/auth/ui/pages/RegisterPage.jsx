@@ -34,8 +34,8 @@ export default function RegisterPage() {
               </h2>
 
               <p className="mt-4 max-w-xl text-base font-medium leading-relaxed text-slate-200">
-                Join our private network, discover new opportunities, and
-                connect with professionals.
+                Manage your content, streamline your workflow, and keep
+                everything organized.
               </p>
             </div>
           </div>

@@ -5,30 +5,63 @@ import LoginPage from "../../features/auth/ui/pages/LoginPage";
 import RegisterPage from "../../features/auth/ui/pages/RegisterPage";
 import DashboardLayout from "../layouts/DashboardLayout";
 import HomePage from "../../features/dashboard/ui/pages/HomePage";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getMe } from "../../features/auth/state/auth/authAction";
+import ProtectedRoute from "./ProtectedRoutes/ProtectedRoute";
+import PublicRoute from "./ProtectedRoutes/PublicRoute";
 
 const AppRoutes = () => {
+  const dispatch = useDispatch();
+  const { mode } = useSelector((store) => store.theme);
+
+  useEffect(() => {
+    dispatch(getMe());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (mode === "light") {
+      document.body.classList.add("light");
+      return;
+    }
+
+    document.body.classList.remove("light");
+  }, [mode]);
+
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <AuthLayout />,
+      element: <PublicRoute />,
       children: [
         {
-          index: true,
-          element: <LoginPage />,
-        },
-        {
-          path: "register",
-          element: <RegisterPage />,
+          path: "",
+          element: <AuthLayout />,
+          children: [
+            {
+              path: "",
+              element: <LoginPage />,
+            },
+            {
+              path: "register",
+              element: <RegisterPage />,
+            },
+          ],
         },
       ],
     },
     {
       path: "/home",
-      element: <DashboardLayout />,
+      element: <ProtectedRoute />,
       children: [
         {
-          index: true,
-          element: <HomePage />,
+          path: "",
+          element: <DashboardLayout />,
+          children: [
+            {
+              path: "",
+              element: <HomePage />,
+            },
+          ],
         },
       ],
     },

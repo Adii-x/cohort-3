@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
+import { loginEmployee } from "../state/auth/authAction";
 
 export const useAuth = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [isVisible, setIsVisible] = useState(false);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
@@ -15,6 +18,7 @@ export const useAuth = () => {
   } = useForm({ mode: "onChange" });
 
   const loginSubmit = (data) => {
+    dispatch(loginEmployee(data));
     console.log(data);
   };
 
